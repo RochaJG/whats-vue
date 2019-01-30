@@ -8,13 +8,13 @@
 <script>
 export default {
   name: 'page1',
-  data() {
+  data () {
     return {
       name: this.$store.state.name
     }
   },
   methods: {
-    changeName() {
+    changeName () {
       this.$store.commit('changeName', this.name)
     }
   }

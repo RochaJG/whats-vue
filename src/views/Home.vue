@@ -7,10 +7,10 @@
 <script>
 export default {
   name: 'home',
-  data() {
+  data () {
     return {
       name: this.$store.state.name
     }
-  },
+  }
 }
 </script>

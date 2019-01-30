@@ -18,6 +18,6 @@ export default new Router({
       path: '/page1',
       name: 'page1',
       component: Page1
-    },
+    }
   ]
 })

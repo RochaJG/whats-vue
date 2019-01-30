@@ -8,7 +8,7 @@ export default new Vuex.Store({
     name: 'Jordan Rocha'
   },
   mutations: {
-    changeName(state, n) {
+    changeName (state, n) {
       state.name = n
     }
   },
