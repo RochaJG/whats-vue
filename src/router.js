@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Page1 from './views/Page1.vue'
 
 Vue.use(Router)
 
 export default new Router({
-process.env.CORDOVA_PLATFORM ? 'hash' :   mode: process.env.CORDOVA_PLATFORM ? 'hash' : 'history',
+  // process.env.CORDOVA_PLATFORM ? 'hash' :   mode: process.env.CORDOVA_PLATFORM ? 'hash' : 'history',
   base: process.env.BASE_URL,
   routes: [
     {
@@ -14,12 +15,9 @@ process.env.CORDOVA_PLATFORM ? 'hash' :   mode: process.env.CORDOVA_PLATFORM ? '
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
+      path: '/page1',
+      name: 'page1',
+      component: Page1
+    },
   ]
 })
