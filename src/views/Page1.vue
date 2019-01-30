@@ -10,12 +10,14 @@ export default {
   name: 'page1',
   data () {
     return {
-      name: this.$store.state.name
+      name: this.$store.state.name[this.$store.state.name.length - 1].text
     }
   },
   methods: {
     changeName () {
       this.$store.commit('changeName', this.name)
+
+      this.$router.replace('/')
     }
   }
 }

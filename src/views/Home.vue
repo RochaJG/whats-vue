@@ -1,6 +1,10 @@
 <template>
   <div class="home">
-    <h1>{{ name }}</h1>
+    <ul>
+      <li v-for="name in names" :key="name.id">
+        <b>{{ name.text }}</b>: <span>{{ formatDate(name.timestamp) }}</span>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -9,7 +13,12 @@ export default {
   name: 'home',
   data () {
     return {
-      name: this.$store.state.name
+      names: this.$store.state.name
+    }
+  },
+  methods: {
+    formatDate (date) {
+      return moment(date).format('DD/MM/YYYY HH:mm:ss')
     }
   }
 }
