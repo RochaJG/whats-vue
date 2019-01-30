@@ -2,7 +2,14 @@ module.exports = {
   baseUrl: '',
 
   pluginOptions: {
-    cordovaPath: 'src-cordova'
+    cordovaPath: 'src-cordova',
+    moment: {
+      locales: [
+        'pt',
+        'en',
+        'es'
+      ]
+    }
   },
 
   publicPath: '',
